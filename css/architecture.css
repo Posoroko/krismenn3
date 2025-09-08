@@ -1,0 +1,21 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    body {
+        height: 100svh;
+        min-height: 100svh;
+        /* Fallbacks for browsers not supporting svh */
+        height: 100dvh;
+        min-height: 100dvh;
+        height: 100vh;
+        min-height: 100vh;
+    }
+}

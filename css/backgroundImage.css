@@ -1,0 +1,45 @@
+/* Responsive background image for bastard_2024_sebastien_durand_56 */
+body {
+  background-image: url('../assets/images/xl/jpg/bastard_2024_sebastien_durand_56_xl.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (background-image: url("image.webp")) {
+  body {
+    background-image: url('../assets/images/xl/webp/bastard_2024_sebastien_durand_56_xl.webp');
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-image: url('../assets/images/l/jpg/bastard_2024_sebastien_durand_56_l.jpg');
+  }
+  @supports (background-image: url("image.webp")) {
+    body {
+      background-image: url('../assets/images/l/webp/bastard_2024_sebastien_durand_56_l.webp');
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('../assets/images/m/jpg/bastard_2024_sebastien_durand_56_m.jpg');
+  }
+  @supports (background-image: url("image.webp")) {
+    body {
+      background-image: url('../assets/images/m/webp/bastard_2024_sebastien_durand_56_m.webp');
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url('../assets/images/s/jpg/bastard_2024_sebastien_durand_56_s.jpg');
+  }
+  @supports (background-image: url("image.webp")) {
+    body {
+      background-image: url('../assets/images/s/webp/bastard_2024_sebastien_durand_56_s.webp');
+    }
+  }
+}

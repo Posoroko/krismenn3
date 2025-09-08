@@ -1,0 +1,21 @@
+/* Color variables for Krismen site */
+:root {
+  --color-bg: #e6e2dc; /* beige/gray smokey background */
+  --color-text: #2c2c2a; /* warm anthracite for text */
+  --color-accent: #bfae9e; /* accent, lighter beige */
+  --color-link: #4b4742; /* slightly lighter anthracite for links */
+  --color-heading: #232220; /* slightly darker for headings */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+a {
+  color: var(--color-link);
+}
