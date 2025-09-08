@@ -1,0 +1,55 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.showsList {
+    list-style-type: none;
+    padding-left: 10vw;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    overflow: scroll;
+}
+
+.show-item {
+    /* border: 1px solid red; */
+    /* width: 45%; */
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+.show-date {
+    color: #e25f45; /* Red-orange color for dates */
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.show-venue {
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.show-location {
+    color: #fff;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.language-tag {
+    background-color: rgba(222, 81, 69, 0.7); /* Semi-transparent red for language tags */
+    color: #fff;
+    border-radius: 15px;
+    padding: 2px 10px;
+    font-size: 0.85em;
+    display: inline-block;
+    margin-left: 5px;
+}

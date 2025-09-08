@@ -2,6 +2,7 @@
 body {
   background-image: url('../assets/images/xl/jpg/bastard_2024_sebastien_durand_56_xl.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 

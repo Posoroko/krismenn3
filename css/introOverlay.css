@@ -4,13 +4,16 @@
   z-index: 5000;
 }
 
-#introOverlay h1 {
+#introOverlay .krismenn {
   /* color: transparent;
   -webkit-text-stroke: 2px var(--color-bg, #e6e2dc); 
   text-stroke: 2px var(--color-bg, #e6e2dc); */
+  color: #2f1f1a;
   font-size: clamp(2.5rem, 8vw, 7rem);
-  font-weight: 600;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 900;
   letter-spacing: 0.05em;
+  opacity: 0.25;
   text-align: center;
   margin: 0;
   line-height: 1.1;
