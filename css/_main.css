@@ -14,7 +14,7 @@
     height: 24px;
 }
 .socialIcon * {
-    fill: rgb(166, 151, 138);
+    fill: var(--text-color);
 }
 
 .iconPiba {

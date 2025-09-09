@@ -5,7 +5,7 @@ export {
 
 const config = {
     autoScroll: {
-        delay: 11000,
+        delay: 16500,
         duration: 1500
     }
 }

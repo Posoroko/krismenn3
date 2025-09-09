@@ -31,7 +31,7 @@ body.light {
 }
 
 header .krismenn {
-    color: rgb(166, 151, 138);
+    color: var(--text-color);
 }
 
 /* 
@@ -39,8 +39,8 @@ header .krismenn {
     Bastard slide show
 */
 
-.bastardBox * {
-    color: rgb(166, 151, 138);
+.bastardBox {
+    color: var(--text-color);
     font-family: "Inter Tight", serif;
 }
 
@@ -54,22 +54,36 @@ header .krismenn {
     left: 50%;
     transform: translateX(-50%);
 }
-.slideContainer .bastard {
+.slide .bastard {
     font-size: 10vw;
     font-family: "Noto Serif JP", serif;
 }
-.slideContainer .text {
+.slide.text,
+.slide .text {
     font-weight: 200;
     font-size: 38px;
 }
 
-.slide {
+.slide1.text,
+.slide2.text {
+    font-size: 45px;
+    width: min(450px, 95vw)
+}
+
+.fadeInOutAnimation,
+.fadeInOutAnimation {
     opacity: 0;
-    animation-name: fadeInOut;
     animation-duration: 3000ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+.fadeInOutAnimation {
+    animation-name: fadeInOut;
+}
+.fadeInAnimation {
+    animation-name: fadeIn;
+}
+
 .slide1 {
     animation-delay: 3000ms;
 }
@@ -80,9 +94,16 @@ header .krismenn {
 
 .slide3 {
     animation-delay: 11000ms;
+    animation-duration: 5000ms;
 }
-.slide4 {
-    animation-delay: 14000ms;
+
+.premiere.fadeInAnimation {
+    /* color: red; */
+    opacity: 0;
+    animation-delay: 13000ms;
+    animation-duration: 1500ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 
@@ -101,4 +122,14 @@ header .krismenn {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        /* color: red; */
+        opacity: 0;
+    }
+    100% {
+        /* color: green; */
+        opacity: 1;
+    }
+}
 

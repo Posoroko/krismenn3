@@ -13,22 +13,22 @@
 }
 
 .show-date {
-    color: #e25f45; /* Red-orange color for dates */
+    color: var(--date-color); 
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 5px;
 }
 
 .show-venue {
-    color: rgb(166, 151, 138);
+    color: var(--text-color);
     font-size: 1em;
     font-weight: bold;
     margin-bottom: 3px;
 }
 
 .show-location {
-    color: rgb(166, 151, 138);
-    font-size: 0.9em;
+    color: var(--text-color);
+    font-size: 1em;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -36,8 +36,8 @@
 }
 
 .language-tag {
-    background-color: rgba(222, 81, 69, 0.7); /* Semi-transparent red for language tags */
-    color: rgb(166, 151, 138);
+    background-color: var(--date-color); /* Semi-transparent red for language tags */
+    color: var(--text-color-light);
     border-radius: 15px;
     padding: 1px 8px;
     font-size: 0.7em;
