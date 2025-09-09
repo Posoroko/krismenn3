@@ -123,7 +123,7 @@ shows.forEach(show => {
     
     <div class="line flex gap10">
         <div class="show-location">
-            ${show.location} (${show.postalCode})
+            ${show.location}
 
             <div class="language-tag">
                 ${show.language}
@@ -135,3 +135,12 @@ shows.forEach(show => {
   `;
   showsList.appendChild(li);
 });
+
+const videoTeaser = document.getElementById('videoTeaser');
+console.log(videoTeaser)
+if (videoTeaser) {
+  videoTeaser.addEventListener('click', (e) => {
+    console.log(e.currentTarget)
+    e.currentTarget.classList.add('active');
+  });
+}

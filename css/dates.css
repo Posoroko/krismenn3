@@ -30,14 +30,14 @@ body {
 
 .show-venue {
     color: #fff;
-    font-size: 0.7em;
+    font-size: 1em;
     font-weight: bold;
     margin-bottom: 3px;
 }
 
 .show-location {
     color: #fff;
-    font-size: 0.7em;
+    font-size: 0.9em;
     display: flex;
     align-items: center;
     flex-wrap: wrap;

@@ -1,11 +1,17 @@
 /* Responsive background image for bastard_2024_sebastien_durand_56 */
 body {
-  background-image: url('../assets/images/xl/jpg/bastard_2024_sebastien_durand_56_xl.jpg');
+  /* background-image: url('../assets/images/xl/jpg/bastard_2024_sebastien_durand_56_xl.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.bottom {
+  background-image: url('../assets/images/bastard_2024_sebastien_durand_56.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* 
 @supports (background-image: url("image.webp")) {
   body {
     background-image: url('../assets/images/xl/webp/bastard_2024_sebastien_durand_56_xl.webp');
@@ -43,4 +49,4 @@ body {
       background-image: url('../assets/images/s/webp/bastard_2024_sebastien_durand_56_s.webp');
     }
   }
-}
+} */

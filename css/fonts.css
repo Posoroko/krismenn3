@@ -29,3 +29,19 @@ body.light {
 .font-inter {
     font-family: "Inter Tight", sans-serif;
 }
+.bastardBox * {
+    color: var(--color-text);
+}
+
+.bastardBox .bastard {
+    font-size: 46px;
+    font-family: "Noto Serif JP", serif;
+    color: var(--color-text);
+}
+.bastardBox .premiere {
+    font-size: 24px;
+}
+
+header .krismenn {
+    color: rgb(101, 67, 38);
+}

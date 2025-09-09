@@ -8,3 +8,19 @@
 @import url('./backgroundImage.css');
 
 /* ...existing code... */
+
+
+.socialIcon {
+    height: 24px;
+}
+
+.iconPiba {
+    height: 85px;
+}
+
+.videoTeaser {
+    filter: sepia(1);
+}
+.videoTeaser.active {
+    filter: sepia(0);
+}

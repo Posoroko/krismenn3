@@ -1,6 +1,6 @@
 /* Styles for the intro overlay */
 #introOverlay {
-  background: radial-gradient(circle, #725e57 0%, #2a2220 100%);
+  /* background: radial-gradient(circle, #725e57 0%, #2a2220 100%); */
   z-index: 5000;
 }
 
