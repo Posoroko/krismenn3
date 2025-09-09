@@ -81,6 +81,9 @@ header .krismenn {
 .slide3 {
     animation-delay: 11000ms;
 }
+.slide4 {
+    animation-delay: 14000ms;
+}
 
 
 @keyframes fadeInOut {

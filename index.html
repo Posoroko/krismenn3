@@ -9,17 +9,13 @@
 </head>
 
 <body class="">
-    <div id="scrollContainer" class="scrollContainer">
+    <div id="scrollContainer" class="scrollContainer scrollSnapMandatory">
         <div 
             id="topFullScreen"
             class="bottomFullScreen fullScreen relative">
-            <!-- <img 
-                src="./assets/images/video_screen_shot.png" 
-                alt=""
-                class="objectFitCover"
-            > -->
 
             <video
+                id="introVideo"
                 class="introVideo full objectFitCover"
                 autoplay
                 loop
@@ -28,7 +24,7 @@
                 poster="./assets/videos/intro_video_poster.jpg"
             >
                 <source 
-                    src="./assets/videos/intro_video_bastard.webm" type="video/webm" 
+                    src="./assets/videos/intro_video_bastard.webm#t=10" type="video/webm" 
                 />
 
             </video>
@@ -39,20 +35,27 @@
                     class="full slideContainer relative
                     "
                 >
-
-                    <span class="slide slide1 newShow text">
-                        nouveau spectacle
+                    <span class="slide slide1 text r">
+                        Il reste des traces des choses vécues Par d’autres dans nos corps ?
                     </span>
 
-                    <span class="slide slide2 bastard">
-                        BASTARD
+                    <span class="slide slide2 text">
+                        Chom a ra roudoù Deus traoù Bet bevet Gant tud all ‘Ba’ hon c’horfoù? 
                     </span>
 
-                    <span class="slide slide3 premiere text">
+                    <div class="slide slide3 flex column alignCenter">
+                        <span class="bastard">
+                            BASTARD
+                        </span>
+                        <div class="text">
+                            Krismenn et Teatr Piba
+                        </div>
+                    </div>
+
+                    <span class="slide slide4 text">
                         Première le 4 novembre
                     </span>
                 </p>
-                
                 
             </div>
         </div>
@@ -124,11 +127,10 @@
         </div>
     </div>
 
-    <div 
+    <!-- <div 
         id="introOverlay"
         class="fixed full top0 left0 centered"
     >
-         <!-- Vertical loading bar -->
         <div class="verticalLoadingBar"></div>
 
         <div>
@@ -137,7 +139,7 @@
             </p>
         
         </div>
-    </div>
+    </div> -->
         
         
 
