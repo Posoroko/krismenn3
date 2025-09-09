@@ -5,6 +5,7 @@
     box-sizing: border-box;
     border: 0;
     background: none;
+    overflow-x: hidden;
 }
 
 img {

@@ -29,19 +29,75 @@ body.light {
 .font-inter {
     font-family: "Inter Tight", sans-serif;
 }
-.bastardBox * {
-    color: var(--color-text);
-}
 
-.bastardBox .bastard {
-    font-size: 46px;
-    font-family: "Noto Serif JP", serif;
-    color: var(--color-text);
-}
-.bastardBox .premiere {
-    font-size: 24px;
-}
+
 
 header .krismenn {
-    color: rgb(101, 67, 38);
+    color: rgb(166, 151, 138);
 }
+
+/* 
+
+    Bastard slide show
+*/
+
+.bastardBox * {
+    color: rgb(166, 151, 138);
+    font-family: "Inter Tight", serif;
+}
+
+.slideContainer  {
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slideContainer .bastard {
+    font-size: 10vw;
+    font-family: "Noto Serif JP", serif;
+}
+.slideContainer .text {
+    font-weight: 200;
+    font-size: 38px;
+}
+
+.slide {
+    opacity: 0;
+    animation-name: fadeInOut;
+    animation-duration: 3000ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.slide1 {
+    animation-delay: 3000ms;
+}
+
+.slide2 {
+    animation-delay: 7000ms;
+}
+
+.slide3 {
+    animation-delay: 11000ms;
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    };
+    10% {
+        opacity: 1;
+    };
+    90% {
+        opacity: 1;
+    };
+    100% {
+        opacity: 0;
+    };
+}
+
+

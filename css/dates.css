@@ -8,15 +8,12 @@ body {
     list-style-type: none;
     padding-left: 10vw;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
-    overflow: scroll;
+    padding: 30vh 0 30vh 10vw;
+    position: relative;
+    z-index: 1;
 }
 
-.show-item {
-    /* border: 1px solid red; */
-    /* width: 45%; */
+.showsItem {
     margin-bottom: 20px;
     padding: 5px 0;
 }
@@ -24,7 +21,7 @@ body {
 .show-date {
     color: #e25f45; /* Red-orange color for dates */
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.1em;
     margin-bottom: 5px;
 }
 
@@ -48,8 +45,8 @@ body {
     background-color: rgba(222, 81, 69, 0.7); /* Semi-transparent red for language tags */
     color: #fff;
     border-radius: 15px;
-    padding: 2px 10px;
-    font-size: 0.85em;
+    padding: 1px 8px;
+    font-size: 0.7em;
     display: inline-block;
     margin-left: 5px;
 }

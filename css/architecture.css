@@ -1,27 +1,33 @@
-body {
+
+.scrollContainer {
     width: 100vw;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .fullScreen {
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
+    scroll-snap-align: start; /* Snap points */
 }
 
-.bottom.fullScreen {
+#topFullScreen {
+
+}
+
+#bottomFullScreen {
+    position: relative; /* Create stacking context */
     overflow: scroll;
 }
 
-/* @media (max-width: 600px) {
-    body {
-        height: 100svh;
-        min-height: 100svh;
-        height: 100dvh;
-        min-height: 100dvh;
-        height: 100vh;
-        min-height: 100vh;
-    }
-} */
+#bottomFullScreen .contentBox {
+    width: 100%;
+    overflow-y: auto; /* Enable scrolling within this container */
+    overflow-x: hidden;
+}
+
+
+

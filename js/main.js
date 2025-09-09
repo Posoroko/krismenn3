@@ -1,42 +1,117 @@
-// main.js: Toggle introOverlay for development
+const config = {
+    autoScrollDelay: 22000,
+    autoScrollDuration: 1500
+}
 
-// Create toggle button
-// const btn = document.createElement('button');
-// btn.textContent = 'Toggle Intro Overlay';
-// btn.style.position = 'fixed';
-// btn.style.top = '20px';
-// btn.style.right = '20px';
-// btn.style.zIndex = '9999';
-// btn.style.padding = '10px 18px';
-// btn.style.fontSize = '1rem';
-// btn.style.background = '#55463f';
-// btn.style.color = '#e6e2dc';
-// btn.style.border = 'none';
-// btn.style.borderRadius = '6px';
-// btn.style.cursor = 'pointer';
-// btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-// btn.style.userSelect = 'none';
+const overlay = document.getElementById('introOverlay');
+const pageScrollContainer = document.getElementById('scrollContainer')
 
-// document.body.appendChild(btn);
+const bottomSection = document.querySelector('#bottomFullScreen');
+let userHasSeenBottomSection = false;
 
-// btn.addEventListener('click', function() {
-// const overlay = document.getElementById('introOverlay');
-// if (overlay) {
-//     overlay.style.display = (overlay.style.display === 'none') ? '' : 'none';
+window.onload = function() {
+    
+    setTimeout(() => {
+        overlay.style.transition = 'opacity 0.6s';
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none'
+
+        pageScrollContainer.addEventListener('scroll', checkBottomSectionVisibility);
+        autoScroll();
+        createBastardSlides()
+    }, 2000);
+    
+    
+};
+
+function checkBottomSectionVisibility() {
+    console.log('scroll detected')
+
+    if (isVisible(bottomSection)) {
+        userHasSeenBottomSection = true;
+        console.log('User has seen bottom section');
+        pageScrollContainer.removeEventListener('scroll', checkBottomSectionVisibility);
+    }
+}
+
+function isVisible(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0
+    );
+}
+
+function smoothScrollTo(element, duration = 12000) { // Default 12 seconds
+    console.log('smooth scrolling activated! Duration:', duration);
+    
+    // Get the container that should be scrolled
+    const start = pageScrollContainer.scrollTop;
+    const target = element.offsetTop;
+    const distance = target - start;
+    const startTime = performance.now();
+    
+    // Temporarily disable snap scrolling during the animation
+    const originalSnapType = pageScrollContainer.style.scrollSnapType;
+    pageScrollContainer.style.scrollSnapType = 'none';
+    
+    function scrollAnimation(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        
+        // Log progress occasionally to debug
+        // if (progress % 0.1 < 0.01) {
+        //     console.log(`Scroll progress: ${Math.round(progress * 100)}%`);
+        // }
+        
+        // Using a gentler easing function
+        const easeInOutCubic = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        
+        pageScrollContainer.scrollTop = start + (distance * easeInOutCubic);
+        
+        if (progress < 1) {
+            requestAnimationFrame(scrollAnimation);
+        } else {
+            // Restore snap scrolling after animation completes
+            pageScrollContainer.style.scrollSnapType = originalSnapType;
+            // console.log('Scroll animation completed');
+        }
+    }
+    
+    requestAnimationFrame(scrollAnimation);
+}
+
+// Then replace your scrollIntoView call with:
+function autoScroll() {
+    setTimeout(() => {
+        if (!userHasSeenBottomSection) {
+            console.log('lets scrolll');
+            smoothScrollTo(bottomSection, config.autoScrollDuration);
+        } else {
+            console.log('User has already seen bottom section, not auto-scrolling');
+        }
+    }, config.autoScrollDelay);
+}
+
+// function autoScroll() {
+
+//     setTimeout(() => {
+//         if (!userHasSeenBottomSection) {
+//             console.log('lets scrolll')
+//             bottomSection.scrollIntoView({
+//                 behavior: 'smooth',
+//                 block: 'start' // 'start', 'center', 'end', or 'nearest'
+//             });
+//         } else {
+//             console.log('User has already seen bottom section, not auto-scrolling');
+//         }
+//     }, 25000)
+
+    
 // }
-// });
 
-// Fade out introOverlay after 2 seconds
-setTimeout(function() {
-  const overlay = document.getElementById('introOverlay');
-  if (overlay) {
-    overlay.style.transition = 'opacity 0.6s';
-    overlay.style.opacity = '0';
-    setTimeout(function() {
-      overlay.style.display = 'none';
-    }, 600);
-  }
-}, 2000);
 
 const shows = [
   {
@@ -110,7 +185,7 @@ const shows = [
 const showsList = document.getElementById('showsList');
 shows.forEach(show => {
   const li = document.createElement('li');
-  li.className = 'show-item';
+  li.className = 'showsItem';
   li.innerHTML = `
     <div class="line flex gap10">
         <div class="show-date">
@@ -135,12 +210,3 @@ shows.forEach(show => {
   `;
   showsList.appendChild(li);
 });
-
-const videoTeaser = document.getElementById('videoTeaser');
-console.log(videoTeaser)
-if (videoTeaser) {
-  videoTeaser.addEventListener('click', (e) => {
-    console.log(e.currentTarget)
-    e.currentTarget.classList.add('active');
-  });
-}

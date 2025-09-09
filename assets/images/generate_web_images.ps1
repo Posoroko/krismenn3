@@ -1,8 +1,19 @@
-# PowerShell script to resize bastard_2024_sebastien_durand_56.jpg for mobile, tablet, and large screens
+# PowerShell script to resize an image for mobile, tablet, and large screens
+# Usage: .\generate_web_images.ps1 filename.jpg
 
+param(
+    [string]$src = $null
+)
 
+if (-not $src) {
+    if ($args.Count -gt 0) {
+        $src = $args[0]
+    } else {
+        Write-Host "Usage: .\generate_web_images.ps1 <filename>"
+        exit 1
+    }
+}
 
-$src = "bastard_2024_sebastien_durand_56.jpg"
 $baseName = [System.IO.Path]::GetFileNameWithoutExtension($src)
 
 # Define sizes and centralized folders

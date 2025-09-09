@@ -13,14 +13,10 @@
 .socialIcon {
     height: 24px;
 }
+.socialIcon * {
+    fill: #a6978a;
+}
 
 .iconPiba {
     height: 85px;
-}
-
-.videoTeaser {
-    filter: sepia(1);
-}
-.videoTeaser.active {
-    filter: sepia(0);
 }
