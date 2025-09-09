@@ -1,4 +1,6 @@
-
+header {
+    background-color: #0000008d;
+}
 .scrollContainer {
     width: 100vw;
     height: 100vh;
@@ -14,13 +16,10 @@
     scroll-snap-align: start; /* Snap points */
 }
 
-#topFullScreen {
-
-}
-
 #bottomFullScreen {
     position: relative; /* Create stacking context */
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #bottomFullScreen .contentBox {

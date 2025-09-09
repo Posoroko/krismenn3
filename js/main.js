@@ -18,7 +18,7 @@ window.onload = function() {
 
         pageScrollContainer.addEventListener('scroll', checkBottomSectionVisibility);
         autoScroll();
-        createBastardSlides()
+
     }, 2000);
     
     

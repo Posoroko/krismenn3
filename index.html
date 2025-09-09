@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krismen</title>
-    <!-- SEO meta tags will be added later -->
+
     <link rel="stylesheet" href="./css/_main.css">
 </head>
 
@@ -20,11 +20,12 @@
             > -->
 
             <video
-                class="
-                    introVideo full objectFitCover
-                "
+                class="introVideo full objectFitCover"
                 autoplay
                 loop
+                muted
+                playsinline
+                poster="./assets/videos/intro_video_poster.jpg"
             >
                 <source 
                     src="./assets/videos/intro_video_bastard.webm" type="video/webm" 
@@ -35,10 +36,7 @@
             <div class="bastardBox absoluteFull">
                 <p 
                     id="slideContainer"
-                    class="
-                        full
-                        slideContainer 
-                        relative
+                    class="full slideContainer relative
                     "
                 >
 
@@ -100,12 +98,6 @@
                             </a>
                         </nav>
                     </div>
-
-                    <nav class="socialLinks">
-                        <a href="https://www.teatrpiba.bzh/project/bastard-2025/">
-                            <img class="iconPiba" src="./assets/images/logo-piba-gris-trsp-1.png" alt="">
-                        </a>
-                    </nav>
                 </header>
 
                 <ul 
@@ -118,7 +110,17 @@
                 <div class="absoluteFull top0 left0 full objectFitCover backgroundImage">
 
                 </div>
+
+                <footer>
+                    <nav class="w100 flex alignCenter justifyCenter pad20">
+                        <a href="https://www.teatrpiba.bzh/project/bastard-2025/">
+                            <img class="iconPiba" src="./assets/images/logo-piba-gris-trsp-1.png" alt="">
+                        </a>
+                    </nav>
+                </footer>
             </div>
+
+            
         </div>
     </div>
 
