@@ -1,0 +1,26 @@
+{
+  "name": "Krismenn - Bastard",
+  "short_name": "Krismenn",
+  "description": "Krismenn - Artiste breton - Bastard avec Teatr Piba - Première le 4 novembre",
+  "icons": [
+    {
+      "src": "/assets/meta-images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/meta-images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "lang": "fr-FR",
+  "dir": "ltr"
+}

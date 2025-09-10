@@ -36,3 +36,8 @@
 .contentBox::-webkit-scrollbar {
   display: none;
 }
+
+.logoPiba {
+    fill: var(--text-color);
+    width: 150px;
+}

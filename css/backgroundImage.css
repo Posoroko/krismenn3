@@ -5,6 +5,11 @@
     z-index: -1;
 }
 
+:root {
+    --fontColor-light: #f4f4f9;
+    --fontColor-dark: #22223b;
+}
+
 @supports (background-image: url("image.webp")) {
   .bottomFullScreen .backgroundImage {
     background-image: url('../assets/images/xl/webp/bastard_2024_sebastien_durand-24.webp');

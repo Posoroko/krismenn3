@@ -30,5 +30,7 @@ header {
     overflow-x: hidden;
 }
 
-
+footer {
+    padding: 30px 10px;
+}
 
