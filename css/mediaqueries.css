@@ -1,0 +1,70 @@
+/* Media Queries */
+
+/* XS devices (phones, 480px and down) */
+@media only screen and (max-width: var(--breakpoint-xs)) {
+  /* XS device styles */
+}
+
+/* Small devices (portrait tablets and large phones, 768px and down) */
+@media only screen and (max-width: var(--breakpoint-sm)) {
+  /* Small device styles */
+}
+
+/* Medium devices (landscape tablets, 992px and down) */
+@media only screen and (max-width: var(--breakpoint-md)) {
+  /* Medium device styles */
+}
+
+/* Large devices (laptops/desktops, 1200px and down) */
+@media only screen and (max-width: var(--breakpoint-lg)) {
+  /* Large device styles */
+}
+
+/* Extra large devices (large laptops and desktops, 1400px and down) */
+@media only screen and (max-width: var(--breakpoint-xl)) {
+  /* Extra large device styles */
+}
+
+/* Media queries for minimum widths */
+@media only screen and (min-width: var(--breakpoint-xs)) {
+  /* Styles for devices wider than XS breakpoint */
+}
+
+@media only screen and (min-width: var(--breakpoint-sm)) {
+  /* Styles for devices wider than SM breakpoint */
+}
+
+@media only screen and (min-width: var(--breakpoint-md)) {
+  /* Styles for devices wider than MD breakpoint */
+}
+
+@media only screen and (min-width: var(--breakpoint-lg)) {
+  /* Styles for devices wider than LG breakpoint */
+}
+
+/* Print styles */
+@media print {
+  /* Print-specific styles */
+  body {
+    print-color-adjust: exact;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles */
+}

@@ -92,7 +92,7 @@ video {
 
 .slide.text {
     font-family: "Noto Serif JP", serif;
-    font-weight: 200;
+    font-weight: 600;
     /* font-size: max(5vw, 38px); */
     font-size: clamp(21px, 4vw, 50px);
     display: flex;
