@@ -2,13 +2,9 @@ video {
     filter: brightness(0.8) grayscale(0.7);
 }
 
-.bastardBox {
+.slideContainer {
     color: var(--text-color);
     font-family: "Inter Tight", serif;
-}
-
-.slideContainer {
-    position: relative;
     /* animation: 
         filmGrain 8s infinite linear, 
         oldFilmFlicker 8s infinite, 
@@ -77,11 +73,11 @@ video {
 }
 
 .slide {
-    width: min(auto, 95vw);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     /* border: 1px solid red; */
 }
 
@@ -93,23 +89,39 @@ video {
 .slide.text {
     font-family: "Noto Serif JP", serif;
     font-weight: 600;
-    /* font-size: max(5vw, 38px); */
-    font-size: clamp(21px, 4vw, 50px);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.slide.text .caps {
-    text-transform: uppercase;
+    font-size: clamp(30px, 4vw, 50px);
+    
 }
 
-.krisMennHaPibe,
+.bzh{
+    bottom: 60vh;
+    left: 30vw;
+    position: absolute;
+}
+
+.fr{
+    top: 60vh;
+    right: 30vw;
+    position: absolute;
+}
+
+@media only screen and (max-width:600px) {
+  .bzh{
+        left: 10vw;
+    }
+
+    .fr{
+        right: 10vw;
+    }
+}
+
+.krisMennHaPiba,
 .premiere {
     font-weight: 200;
     font-size: clamp(16px, 3vw, 32px);
 }
 
-.introSlideShow {
+.slideContainer {
     --between: 600ms;
     --duration: 3000ms;
     --initial-delay: 2000ms;
