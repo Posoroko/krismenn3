@@ -2,13 +2,13 @@ import { requestAutoScroll } from './autoScroll.js';
 import { populateAgenda } from './agenda.js';
 import { checkBottomSectionVisibility } from './utils.js'
 import { pageScrollContainer, bottomSection } from './domReferences.js';
-import { closeLoadingOverlay } from './loadingOverlay.js';
+import { config } from './config.js'
 
 
 window.onload = function() {
 
     let vid = document.getElementById("introVideo");
-    vid.playbackRate = 0.8; 
+    vid.playbackRate = config.video.speedFactor; 
 
     populateAgenda();
     // closeLoadingOverlay()

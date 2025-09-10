@@ -3,10 +3,19 @@ export {
     agendaDates
 }
 
+const video = {
+    length: 25000,
+    speedFactor: 0.8
+}
+const autoScroll = {
+    duration: 1500
+}
+
 const config = {
+    video,
     autoScroll: {
-        delay: 16500,
-        duration: 1500
+        delay: video.length / video.speedFactor - 1000,
+        duration: autoScroll.duration
     }
 }
 

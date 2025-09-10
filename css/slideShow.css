@@ -1,0 +1,120 @@
+video {
+    filter: brightness(0.8) grayscale(0.7);
+}
+
+.bastardBox {
+    color: var(--text-color);
+    font-family: "Inter Tight", serif;
+}
+
+.slideContainer  {
+    position: relative;
+}
+
+.slide {
+    width: min(auto, 95vw);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+}
+.slide .bastard {
+    font-size: 10vw;
+    font-family: "Noto Serif JP", serif;
+}
+.slide.text,
+.slide .text {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 200;
+    font-size: 5vw;
+}
+
+.slide .text {
+    font-weight: 200;
+    font-size: 38px;
+}
+
+.introSlideShow {
+    --between: 600ms;
+    --duration: 3000ms;
+    --initial-delay: 2000ms;
+}
+
+.fadeInOutAnimation,
+.fadeInOutAnimation {
+    opacity: 0;
+    animation-duration: var(--duration);
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.fadeInOutAnimation {
+    animation-name: fadeInOut;
+}
+.fadeInAnimation {
+    animation-name: fadeIn;
+}
+
+
+.slide1 {
+    animation-delay: var(--initial-delay);
+}
+
+.slide2 {
+    animation-delay: calc(var(--initial-delay) + var(--duration) + var(--between));
+}
+
+.slide3 {
+    animation-delay: calc(var(--initial-delay) + (var(--duration) + var(--between)) * 2);
+}
+
+.slide4 {
+    animation-delay: calc(var(--initial-delay) + (var(--duration) + var(--between)) * 3);
+}
+
+.slide5 {
+    animation-delay: calc(var(--initial-delay) + (var(--duration) + var(--between)) * 4);
+}
+
+.slide6 {
+    animation-delay: calc(var(--initial-delay) + (var(--duration) + var(--between)) * 5);
+}
+.slide.last {
+    animation-delay: calc(var(--initial-delay) + (var(--duration) + var(--between)) * 6);
+    animation-duration: 5000ms;
+}
+
+.premiere.fadeInAnimation {
+    opacity: 0;
+    animation-delay: calc(var(--initial-delay) + (var(--duration) + var(--between)) * 6 + 2000ms);
+    animation-duration: 1500ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        /* color: red; */
+        opacity: 0;
+    }
+    100% {
+        /* color: green; */
+        opacity: 1;
+    }
+}
