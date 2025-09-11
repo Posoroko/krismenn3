@@ -1,48 +1,79 @@
 /* Styles for the intro overlay */
 #introOverlay {
-  background: radial-gradient(circle, #725e57 0%, #2a2220 100%);
+  background: radial-gradient(circle, #4b413d 0%, #180f0c 100%);
   z-index: 5000;
+  opacity: 1;
+  transition: opacity 1s ease-out;
 }
 
-#introOverlay .krismenn {
-  /* color: transparent;
-  -webkit-text-stroke: 2px var(--color-bg, #e6e2dc); 
-  text-stroke: 2px var(--color-bg, #e6e2dc); */
-  color: #2f1f1a;
-  font-size: clamp(2.5rem, 8vw, 7rem);
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  opacity: 0.25;
-  text-align: center;
-  margin: 0;
-  line-height: 1.1;
-}
-
-/* Vertical loading bar animation */
-.verticalLoadingBar {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 5px;
-  height: 100vh;
-  z-index: 6000;
-  display: flex;
-  align-items: flex-end;
+/* body.loadedAndReady #introOverlay {
+  opacity: 0;
   pointer-events: none;
+} */
+
+/* Modern Square Spinner */
+.fluidSpinner {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  perspective: 500px;
+  border: 1px solid rgba(233, 220, 201, 0.115);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.179);
 }
 
-.verticalLoadingBar::before {
-  content: '';
-  display: block;
+.fluidSpinner .ring {
+  position: absolute;
   width: 100%;
-  height: 0%;
-  background: #803a31;
-  /* border-radius: 6px 6px 0 0; */
-  animation: verticalBarFill 2s cubic-bezier(0.85, 0.01, 0.15, 0.99) forwards;
+  height: 100%;
+  border-radius: 0; /* Changed to square */
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  transform-style: preserve-3d;
+  animation: fluidSpin 8s linear infinite; /* Faster animation (12s -> 8s) */
 }
 
-@keyframes verticalBarFill {
-  0% { height: 0%; }
-  100% { height: 100%; }
+.fluidSpinner .ring:nth-child(1) {
+  border: 2px solid rgba(233, 220, 201, 0.3);
+  animation-delay: -1.5s; /* Adjusted timing */
+}
+
+.fluidSpinner .ring:nth-child(2) {
+  border: 2px solid rgba(221, 190, 169, 0.5);
+  transform: rotateY(70deg);
+  animation-delay: -3s; /* Adjusted timing */
+}
+
+.fluidSpinner .ring:nth-child(3) {
+  border: 2px solid rgba(184, 153, 140, 0.7);
+  transform: rotateX(60deg);
+  animation-delay: -4.5s; /* Adjusted timing */
+}
+
+@keyframes fluidSpin {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+/* Loading text */
+.loadingText {
+  font-family: sans-serif;
+  color: rgba(255, 248, 240, 0.6);
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  animation: textFade 4s ease-in-out infinite;
+}
+
+@keyframes textFade {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
