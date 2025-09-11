@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="./css/_main.css">
 </head>
 
-<body class="">
+<body class="" id="body">
     <div id="scrollContainer" class="scrollContainer scrollSnapMandatory">
         <div 
             id="topFullScreen"
@@ -50,8 +50,7 @@
 
             <video
                 id="introVideo"
-                class="introVideo full objectFitCover"
-                autoplay
+                class="introVideo"
                 loop
                 muted
                 playsinline
@@ -63,7 +62,7 @@
 
             </video>
 
-            <div class="slideContainer absoluteFull">
+            <div class="slideContainer">
                 <!-- <p 
                     id="slideContainer"
                     class="full slideContainer relative
@@ -128,7 +127,7 @@
                         </span>
                     </span>
 
-                    <div class="slide last full flex column alignCenter justifyCenter fadeInOutAnimation">
+                    <div class="slide last full flex column alignCenter justifyCenter fadeInAnimation">
                         <span class="bastard">
                             BASTARD
                         </span>
@@ -569,24 +568,20 @@
                     </div>
                 </footer>
             </div>
-
-            
         </div>
     </div>
 
-    <!-- <div 
+    <div 
         id="introOverlay"
-        class="fixed full top0 left0 centered"
+        class="fixed full top0 left0 flex column justifyCenter alignCenter gap20"
     >
-        <div class="verticalLoadingBar"></div>
-
-        <div>
-            <p class="krismenn">
-                Krismenn
-            </p>
-        
+        <div class="fluidSpinner full">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
         </div>
-    </div> -->
+        <div class="loadingText">chargement</div>
+    </div>
 
     <script src="js/main.js" type="module"></script>
 </body>
