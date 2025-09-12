@@ -1,14 +1,8 @@
 {
-  "name": "Krismenn - Bastard",
+  "name": "Krismenn · Chanteur, auteur-compositeur, comédien, musique à l’image",
   "short_name": "Krismenn",
-  "description": "Krismenn - Artiste breton - Bastard avec Teatr Piba - Première le 4 novembre",
+  "description": "Artiste bâtard · Kan ha diskan · Écriture contemporaine · Musiques expérimentales · Théâtre · Fest-noz · Musique de film · Création sonore",
   "icons": [
-    {
-      "src": "/assets/meta-images/favicon/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
     {
       "src": "/assets/meta-images/favicon/android-chrome-512x512.png",
       "sizes": "512x512",
