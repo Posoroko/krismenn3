@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --fontColor-light: #f4f4f9;
@@ -31,9 +30,6 @@ body.light {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-}
-.font-inter {
-    font-family: "Inter Tight", sans-serif;
 }
 
 header .krismenn {

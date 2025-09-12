@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
     <!-- Mobile Responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Language and Direction -->
@@ -54,12 +56,11 @@
                 loop
                 muted
                 playsinline
-                poster="./assets/videos/intro_video_poster.jpg"
+                poster="./assets/videos/video_screen_shot.webp"
             >
                 <source 
                     src="./assets/videos/intro_video_bastard.webm" type="video/webm" 
                 />
-
             </video>
 
             <div class="slideContainer">
