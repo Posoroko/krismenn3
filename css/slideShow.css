@@ -16,6 +16,9 @@ video {
     top: 0;
     left: 0;
 }
+.slide span{
+    font-family: "Noto Serif JP", serif;
+}
 
 .slide .bastard {
     font-size: clamp(50px, 10vw, 100px);
