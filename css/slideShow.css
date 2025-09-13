@@ -62,7 +62,7 @@ video {
 .slideContainer {
     --between: 600ms;
     --duration: 3000ms;
-    --initial-delay: 2000ms;
+    --initial-delay: 500ms;
 }
 
 .fadeInOutAnimation {

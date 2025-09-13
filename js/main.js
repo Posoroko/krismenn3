@@ -7,32 +7,37 @@ import { closeLoadingOverlay } from './loadingOverlay.js';
 
 
 window.onload = function() {
-    let vid = document.getElementById("introVideo");
     
-    if (vid) {
-        // Set playback rate
-        vid.playbackRate = config.video.speedFactor; 
+    this.setTimeout(startVidCloseLoadingOverlay, 1000)
 
-        // Explicitly start the video
-        vid.play().catch(error => {
-            console.log("Video play failed:", error);
-            // Handle autoplay policy issues if needed
-        });
-
-        vid.addEventListener('timeupdate', () => {
-            if (vid.currentTime >= 1.5 && vid.currentTime < 2.5) {
-                vid.currentTime = 6;
-            }
-        });
-    }
     
-    
-    closeLoadingOverlay()
-    body.classList.add('loadedAndReady')
-
-    pageScrollContainer.addEventListener('scroll', checkBottomSectionVisibility);
-    requestAutoScroll(pageScrollContainer, bottomSection);
-    populateAgenda();
 };
 
 
+function startVidCloseLoadingOverlay() {
+    let vid = document.getElementById("introVideo");
+    
+    if (vid) {
+        vid.playbackRate = config.video.speedFactor;
+
+        vid.play().catch(error => {
+            console.log("Video play failed:", error);
+        });
+            
+        // Close the loading overlay once video can play
+        closeLoadingOverlay();
+        body.classList.add('loadedAndReady');
+
+        pageScrollContainer.addEventListener('scroll', checkBottomSectionVisibility);
+        requestAutoScroll(pageScrollContainer, bottomSection);
+        populateAgenda();
+
+    } else {
+        // No video on this page, close overlay immediately
+        closeLoadingOverlay();
+        body.classList.add('loadedAndReady');
+    }
+
+    
+    
+}
