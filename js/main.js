@@ -20,8 +20,8 @@ window.onload = function() {
         });
 
         vid.addEventListener('timeupdate', () => {
-            if (vid.currentTime >= 2 && vid.currentTime < 2.5) {
-                vid.currentTime = 5.5;
+            if (vid.currentTime >= 1.5 && vid.currentTime < 2.5) {
+                vid.currentTime = 6;
             }
         });
     }
