@@ -1,0 +1,37 @@
+/* Mentions légales page styles */
+/* Override the universal overflow hidden from reset.css */
+html, body {
+    overflow: auto !important;
+    height: auto !important;
+}
+
+h2 {
+    font-weight: 400;
+    border-bottom: 1px solid var(--text-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Style overrides for dark theme */
+.legal-content a {
+    color: var(--date-color);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.legal-content a:hover {
+    opacity: 0.8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 1;
+}

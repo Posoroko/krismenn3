@@ -2,117 +2,142 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions Légales - Krismenn.com</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-        h1 {
-            color: #111;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #444;
-            margin-top: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        strong {
-            font-weight: bold;
-        }
-        p {
-            margin-bottom: 16px;
-        }
-        .footer {
-            margin-top: 40px;
-            font-style: italic;
-            font-size: 0.9em;
-            color: #666;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/_main.css">
 </head>
 
 <body>
-    <h1>Mentions Légales</h1>
+    <div id="bottomFullScreen" class="bottomFullScreen fullScreen">
+        <div class="contentBox relative">
+            <header class="flex justifyBetween pad20">
+                <div class="socialLinks">
+                    <h1 class="krismenn">
+                        Krismenn
+                    </h1>
 
-    <h2>Éditeur du site</h2>
-    <p>
-        <strong>Propriétaire du site :</strong><br>
-        Christophe Le Menn<br>
-        <a href="mailto:krismenn@gmail.com">info@krismenn.com</a>
-    </p>
+                    <nav class="flex alignCenter gap5">
+                        <a class="socialIcon fbIcon menuLink centered h100" href="https://www.facebook.com/Krismenn/" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px">
+                                <!-- <rect fill="none" height="24" width="24"></rect> -->
+                                <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,
+                                1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"></path>
+                            </svg>
+                        </a>
 
-    <h2>Hébergement</h2>
-    <p>
-        Le site krismenn.com est hébergé par :<br>
-        <strong>Netlify, Inc.</strong><br>
-        610 22nd Street, Suite 315<br>
-        San Francisco, CA 94107<br>
-        États-Unis<br>
-        Site web : <a href="https://www.netlify.app" target="_blank">netlify.app</a>
-    </p>
+                        <a class="socialIcon instaIcon menuLink centered h100" href="https://www.instagram.com/krismenn/" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                                <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16
+                                3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761
+                                7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12
+                                15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
+                            </svg>
+                        </a>
 
-    <h2>Conception et développement</h2>
-    <p>
-        Le site a été conçu et développé par :<br>
-        <strong>Studio Posoroko</strong><br>
-        <a href="mailto:krismenn@gmail.com">eric@posoroko.com</a>
-    </p>
+                        <a class="socialIcon ytIcon menuLink centered h100" href="https://www.youtube.com/user/krismenn29" target="_blank" rel="noreferrer noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24px" height="24px">
+                                <path d="M 8 2 C 5.960938 2 4.15625 2.210938 3.058594 2.375 C 2.160156 2.507813 1.445313 3.210938 1.28125 4.113281 C 1.140625 4.902344 1 6.054688 1 7.5 C 1 8.945313 1.140625 10.097656 1.28125 10.886719 C 1.445313 11.789063 2.160156 12.488281 3.058594 12.625 C 4.160156 12.789063 5.972656 13 8 13 C 10.027344 13 11.835938 12.789063 12.9375 12.625 L 12.941406 12.625 C 13.839844 12.492188 14.554688 11.789063 14.71875 10.886719 C 14.859375 10.09375 15 8.941406 15 7.5 C 15 6.054688 14.859375 4.902344 14.714844 4.113281 C 14.554688 3.210938 13.839844 2.507813 12.941406 2.375
+                                    C 11.84375 2.210938 10.039063 2 8 2 Z M 8 3 C 9.96875 3 11.730469 3.203125 12.792969 3.363281 C 13.261719 3.433594
+                                    13.640625 3.800781 13.730469 4.289063 C 13.863281 5.027344 14 6.121094 14 7.5 C 14 8.878906 13.863281 9.972656 13.734375
+                                    10.707031 C 13.644531 11.199219 13.265625 11.566406 12.792969 11.636719 C 11.722656 11.792969 9.957031 12 8 12 C 6.042969
+                                    12 4.273438 11.792969 3.207031 11.636719 C 2.738281 11.566406 2.355469 11.199219 2.265625 10.707031 C 2.136719 9.96875 2
+                                    8.878906 2 7.5 C 2 6.117188 2.136719 5.027344 2.265625 4.289063 C 2.355469 3.800781 2.734375 3.433594 3.203125 3.367188 L 3.207031 3.367188 C 4.269531 3.207031 6.03125 3 8 3 Z M 6 5 L 6 10 L 11 7.5 Z"></path>
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </header>
 
-    <h2>Propriété intellectuelle</h2>
-    <p>
-        Le contenu textuel du site krismenn.com est la propriété exclusive de Christophe Le Menn, sauf mention contraire.
-    </p>
-    <p>
-        Les photos présentes sur le site sont la propriété de Sebastien Durand.
-    </p>
-    <p>
-        Les vidéos présentes sur le site sont la propriété de Teatr Piba.
-    </p>
-    <p>
-        Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, par quelque procédé que ce soit, sans l'autorisation expresse écrite des ayants droit respectifs, est strictement interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.
-    </p>
+            <div class="pageWidthContainer">
+                <h1 class="pageTitle">Mentions Légales</h1>
 
-    <h2>Données personnelles</h2>
-    <p>
-        Le site krismenn.com ne collecte aucune donnée personnelle des utilisateurs.
-    </p>
-    <p>
-        Conformément au Règlement Général sur la Protection des Données (RGPD) en vigueur depuis le 25 mai 2018, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant. Pour exercer ces droits, vous pouvez contacter Christophe Le Menn à l'adresse indiquée ci-dessus.
-    </p>
+                <h2>Éditeur du site</h2>
+                <p>
+                    <strong>Propriétaire du site :</strong><br>
+                    Christophe Le Menn<br>
+                    <a href="mailto:krismenn@gmail.com">info@krismenn.com</a>
+                </p>
 
-    <h2>Cookies</h2>
-    <p>
-        Le site krismenn.com peut utiliser des cookies pour améliorer l'expérience de navigation des utilisateurs. Les utilisateurs peuvent configurer leur navigateur pour refuser l'utilisation de cookies.
-    </p>
+                <h2>Hébergement</h2>
+                <p>
+                    Le site krismenn.com est hébergé par :<br>
+                    <strong>Netlify, Inc.</strong><br>
+                    610 22nd Street, Suite 315<br>
+                    San Francisco, CA 94107<br>
+                    États-Unis<br>
+                    Site web : <a href="https://www.netlify.app" target="_blank">netlify.app</a>
+                </p>
 
-    <h2>Liens hypertextes</h2>
-    <p>
-        Le site krismenn.com peut contenir des liens hypertextes vers d'autres sites internet. La navigation sur ces sites est soumise à leurs propres conditions d'utilisation et politiques de confidentialité.
-    </p>
+                <h2>Conception et développement</h2>
+                <p>
+                    Le site a été conçu et développé par :<br>
+                    <strong>Studio Posoroko</strong><br>
+                    <a href="mailto:krismenn@gmail.com">eric@posoroko.com</a>
+                </p>
 
-    <h2>Droit applicable et juridiction compétente</h2>
-    <p>
-        Tout litige en relation avec l'utilisation du site krismenn.com est soumis au droit français. L'utilisateur reconnaît la compétence exclusive des tribunaux français.
-    </p>
+                <h2>Propriété intellectuelle</h2>
+                <p>
+                    Le contenu textuel du site krismenn.com est la propriété exclusive de Christophe Le Menn, sauf mention contraire.
+                </p>
+                <p>
+                    Les photos présentes sur le site sont la propriété de Sebastien Durand.
+                </p>
+                <p>
+                    Les vidéos présentes sur le site sont la propriété de Teatr Piba.
+                </p>
+                <p>
+                    Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, par quelque procédé que ce soit, sans l'autorisation expresse écrite des ayants droit respectifs, est strictement interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.
+                </p>
 
-    <h2>Contact</h2>
-    <p>
-        Pour toute question relative au site et à son contenu, vous pouvez contacter Christophe Le Menn à l'adresse indiquée ci-dessus.
-    </p>
+                <h2>Données personnelles</h2>
+                <p>
+                    Le site krismenn.com ne collecte aucune donnée personnelle des utilisateurs.
+                </p>
+                <p>
+                    Conformément au Règlement Général sur la Protection des Données (RGPD) en vigueur depuis le 25 mai 2018, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant. Pour exercer ces droits, vous pouvez contacter Christophe Le Menn à l'adresse indiquée ci-dessus.
+                </p>
 
-    <div class="footer">
-        Dernière mise à jour : 10 septembre 2025
+                <h2>Cookies</h2>
+                <p>
+                    Le site krismenn.com peut utiliser des cookies pour améliorer l'expérience de navigation des utilisateurs. Les utilisateurs peuvent configurer leur navigateur pour refuser l'utilisation de cookies.
+                </p>
+
+                <h2>Liens hypertextes</h2>
+                <p>
+                    Le site krismenn.com peut contenir des liens hypertextes vers d'autres sites internet. La navigation sur ces sites est soumise à leurs propres conditions d'utilisation et politiques de confidentialité.
+                </p>
+
+                <h2>Droit applicable et juridiction compétente</h2>
+                <p>
+                    Tout litige en relation avec l'utilisation du site krismenn.com est soumis au droit français. L'utilisateur reconnaît la compétence exclusive des tribunaux français.
+                </p>
+
+                <h2>Contact</h2>
+                <p>
+                    Pour toute question relative au site et à son contenu, vous pouvez contacter Christophe Le Menn à l'adresse indiquée ci-dessus.
+                </p>
+
+                <div class="footer">
+                    Dernière mise à jour : 10 septembre 2025
+                </div>
+                
+                <a href="/" class="back-link">← Retour à l'accueil</a>
+            </div>
+        </div>
     </div>
+
+    <footer class="flex column alignCenter pad20">
+        <!-- Copyright information -->
+        <p class="copyright fS12">© 2025 Krismenn. Tous droits réservés.</p>
+        
+        <!-- Legal links -->
+        <p class="legalLinks fS12 marTop10">
+            <a href="/pages/mentions-legales.html">Mentions légales</a>
+            <span class="marLeft10 marRight10">|</span>
+            <a href="https://posoroko.com">Studio Posoroko</a>
+        </p>
+    </footer>
 </body>
 </html>
