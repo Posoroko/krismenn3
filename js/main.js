@@ -8,11 +8,9 @@ import { closeLoadingOverlay } from './loadingOverlay.js';
 
 window.onload = function() {
     
-    this.setTimeout(startVidCloseLoadingOverlay, 1000)
+    setTimeout(startVidCloseLoadingOverlay, 1000)
 
-    
 };
-
 
 function startVidCloseLoadingOverlay() {
     let vid = document.getElementById("introVideo");
@@ -20,10 +18,15 @@ function startVidCloseLoadingOverlay() {
     if (vid) {
         vid.playbackRate = config.video.speedFactor;
 
+        vid.addEventListener('timeupdate', function() {
+            if (vid.currentTime >= 1.5 && vid.currentTime <= 2.5) {
+                vid.currentTime = 6;
+            }
+        });
         vid.play().catch(error => {
             console.log("Video play failed:", error);
         });
-            
+
         // Close the loading overlay once video can play
         closeLoadingOverlay();
         body.classList.add('loadedAndReady');
@@ -38,6 +41,4 @@ function startVidCloseLoadingOverlay() {
         body.classList.add('loadedAndReady');
     }
 
-    
-    
 }

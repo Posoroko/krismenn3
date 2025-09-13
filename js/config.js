@@ -4,8 +4,8 @@ export {
 }
 
 const video = {
-    length: (25000 - 6000),
-    speedFactor: 0.68
+    length: (25000 - 4500),
+    speedFactor: 0.74
 }
 const autoScroll = {
     duration: 1500
@@ -14,7 +14,7 @@ const autoScroll = {
 const config = {
     video,
     autoScroll: {
-        delay: video.length / video.speedFactor - 1000,
+        delay: video.length / video.speedFactor - 300,
         duration: autoScroll.duration
     }
 }
