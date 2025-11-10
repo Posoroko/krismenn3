@@ -52,7 +52,7 @@ const agendaDates = [
   },
   {
     date: "16/11/25",
-    venue: "La Grande Boutique",
+    venue: "Salle Lein Are Roc'h",
     location: "Kergrist-Moelou (22)",
     language: "français"
   },
