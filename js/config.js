@@ -85,5 +85,11 @@ const agendaDates = [
     venue: "L'Atelier Culturel",
     location: "Le Family, Landerneau (29)",
     language: "français & LSF"
+  },
+  {
+    date: "13/03/26",
+    venue: "Le Poulpe",
+    location: "Plescop (56)",
+    language: "français"
   }
 ];
