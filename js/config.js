@@ -21,45 +21,27 @@ const config = {
 
 const agendaDates = [
   {
-    date: "04/11/25",
-    venue: "Théâtre de Cornouaille",
-    location: "Scène Nationale de Quimper (29)",
+    date: "13/03/26",
+    venue: "Le Poulpe",
+    location: "Plescop (56)",
     language: "français"
   },
   {
-    date: "05/11/25",
-    venue: "Théâtre de Cornouaille",
-    location: "Scène Nationale de Quimper (29)",
+    date: "05/02/26",
+    venue: "L'Atelier Culturel",
+    location: "Le Family, Landerneau (29)",
     language: "français & LSF"
   },
   {
-    date: "06/11/25",
-    venue: "Théâtre de Cornouaille",
-    location: "Scène Nationale de Quimper (29)",
-    language: "breton"
-  },
-  {
-    date: "13/11/25",
-    venue: "La Passerelle",
-    location: "Scène Nationale de Saint-Brieuc (22)",
+    date: "31/01/26",
+    venue: "Festival Le Goût des Langues",
+    location: "La Balise, Saint Hilaire de Riez (85)",
     language: "français & LSF"
   },
   {
-    date: "14/11/25",
-    venue: "La Passerelle",
-    location: "Scène Nationale de Saint-Brieuc (22)",
-    language: "breton"
-  },
-  {
-    date: "16/11/25",
-    venue: "Salle Lein Are Roc'h",
-    location: "Kergrist-Moelou (22)",
-    language: "français"
-  },
-  {
-    date: "20/11/25",
-    venue: "Le Sillon",
-    location: "Pleubian (22)",
+    date: "15 et 16/01/25",
+    venue: "La Paillette",
+    location: "Rennes (35)",
     language: "français"
   },
   {
@@ -69,27 +51,45 @@ const agendaDates = [
     language: "français"
   },
   {
-    date: "15 et 16/01/25",
-    venue: "La Paillette",
-    location: "Rennes (35)",
+    date: "20/11/25",
+    venue: "Le Sillon",
+    location: "Pleubian (22)",
     language: "français"
   },
   {
-    date: "31/01/26",
-    venue: "Festival Le Goût des Langues",
-    location: "La Balise, Saint Hilaire de Riez (85)",
+    date: "16/11/25",
+    venue: "Salle Lein Are Roc'h",
+    location: "Kergrist-Moelou (22)",
+    language: "français"
+  },
+  {
+    date: "14/11/25",
+    venue: "La Passerelle",
+    location: "Scène Nationale de Saint-Brieuc (22)",
+    language: "breton"
+  },
+  {
+    date: "13/11/25",
+    venue: "La Passerelle",
+    location: "Scène Nationale de Saint-Brieuc (22)",
     language: "français & LSF"
   },
   {
-    date: "05/02/26",
-    venue: "L'Atelier Culturel",
-    location: "Le Family, Landerneau (29)",
+    date: "06/11/25",
+    venue: "Théâtre de Cornouaille",
+    location: "Scène Nationale de Quimper (29)",
+    language: "breton"
+  },
+  {
+    date: "05/11/25",
+    venue: "Théâtre de Cornouaille",
+    location: "Scène Nationale de Quimper (29)",
     language: "français & LSF"
   },
   {
-    date: "13/03/26",
-    venue: "Le Poulpe",
-    location: "Plescop (56)",
+    date: "04/11/25",
+    venue: "Théâtre de Cornouaille",
+    location: "Scène Nationale de Quimper (29)",
     language: "français"
   }
 ];
